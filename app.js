@@ -82,11 +82,12 @@ if(req.body.email=="Mike@aol.com" && req.body.password=="abc123"){
 }else{
     sess=req.session;
     sess.loggedin= false;
+    errors.push("Invalid Login Attempt!")
     res.render('index',{pagename:"Home",errors:errors})
 }
     
 
-
+console.log(errors);
 
 })
 app.post("/register",function(req,res){
@@ -135,7 +136,7 @@ app.post("/register",function(req,res){
     
 
 
-console.log(errors);
+
     res.render("index",{pagename:"Home",errors:errors});
 })
 

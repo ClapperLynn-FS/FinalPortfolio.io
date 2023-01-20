@@ -10,9 +10,10 @@
                 <li class="nav-item"><a class="nav-link" style="color:black" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link" style="color:black" href="/projects">Projects</a></li>
                 <li class="nav-item"><a class="nav-link" style="color:black" href="/contact">Contact</a></li>
+                
                 <% if(typeof(sess)!="undefined" && sess.loggedin==true){ %>
-                    <a class="nav-link" href="/profile">Profile</a>
-                    <a class="nav-link" href="/logout">Log Out</a>
+                    <a class="nav-link" style="color: black;" href="/profile">Profile</a>
+                    <a class="nav-link" style="color: black;" href="/logout">Log Out</a>
                 <%}%>
             </ul>
         </div>
@@ -44,8 +45,10 @@
     </form>
 </div>
 <% if(typeof(errors)!="undefined"){ %>
+
     <% for(x in errors){%>
-       <br><span style="width: 55px;"><% errors[x] %></span>
-        <%}%>
+
+       <br><span> <%errors[x]%> </span>
     <%}%>
+<%}%>
     
