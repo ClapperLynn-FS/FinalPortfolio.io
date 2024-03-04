@@ -142,4 +142,4 @@ app.post("/register",function(req,res){
 
 app.use("/",router)
 
-let server = app.listen("3001");
+let server = app.listen("10000");
